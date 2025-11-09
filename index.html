@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Per la mia patatina</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Musica di sottofondo -->
+  <audio id="bgMusic" loop>
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-romantic-piano-01-219.mp3" type="audio/mpeg">
+    Il tuo browser non supporta l'audio.
+  </audio>
+
+  <div class="container">
+    <h1>Per la mia patatina bellissima</h1>
+    <h2>Scegli un regalo</h2>
+
+    <div class="buttons">
+      <button onclick="mostraFoto1()">Apri</button>
+      <button onclick="mostraSorpresina()">Sorpresina</button>
+      <button onclick="apriSpotify()">Canzone</button>
+    </div>
+
+    <!-- Sezioni -->
+    <div id="foto1" class="sezione">
+      <img src="/foto1.jpg" alt="Foto 1" class="regalo-img zoomable">
+      <p>Torna <span onclick="tornaIndietro()" class="back">Indietro</span></p>
+    </div>
+
+    <div id="sorpresina" class="sezione">
+      <img src="/foto2.jpg" alt="Sorpresina" class="regalo-img zoomable">
+      <h3 class="typewriter">Una sorpresa per te, te la do il 7</h3>
+      <p id="tiAmo" class="typewriter"></p>
+      <p>Torna <span onclick="tornaIndietro()" class="back">Indietro</span></p>
+    </div>
+
+    <!-- Pulsante bacio -->
+    <button id="bacioBtn" onclick="mostraBacio()">Clicca per un bacio</button>
+    <div id="cuore" class="cuore">Muah!</div>
+  </div> <!-- CHIUSURA DEL CONTAINER -->
+
+  <script src="script.js"></script>
+</body>
+</html>

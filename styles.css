@@ -1,0 +1,114 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+  z-index: 10;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 { color: #666; margin-bottom: 30px; }
+
+.buttons button, #bacioBtn {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover, #bacioBtn:hover {
+  background: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(233,30,99,0.3);
+}
+
+.sezione { 
+  display: none; 
+  margin-top: 30px; 
+}
+
+.regalo-img { 
+  width: 100%; 
+  max-width: 350px; 
+  border-radius: 20px; 
+  margin: 20px 0; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+  cursor: zoom-in;
+}
+
+.zoomable:hover { 
+  transform: scale(1.05); 
+  transition: 0.3s; 
+}
+
+.back { 
+  color: #e91e63; 
+  cursor: pointer; 
+  text-decoration: underline; 
+  font-weight: bold; 
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #e91e63;
+  white-space: nowrap;
+  margin: 15px auto;
+  letter-spacing: .15em;
+  display: inline-block;
+}
+
+.cuore {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: #c2185b;
+  font-weight: bold;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 3px solid #e91e63;
+  text-shadow: 0 0 20px #e91e63;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.15); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* EFFETTO PETALI E CUORICINI */
+@keyframes fall {
+  to { 
+    transform: translateY(100vh) rotate(720deg); 
+    opacity: 0; 
+  }
+}
